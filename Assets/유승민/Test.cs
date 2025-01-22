@@ -8,6 +8,7 @@ public class Test : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        StageData sd = Resources.Load<StageData>("StageData");
         for(int i = 0; i < 6; ++i)
         {
             for(int j = 0; j < 6; ++j)
@@ -15,7 +16,7 @@ public class Test : MonoBehaviour
                 Instantiate(obj, new Vector3(i, j), Quaternion.identity);
             }
         }
-        Debug.Log("TEST");
+        Debug.Log($"TEST {sd.width}, {sd.height}");
     }
 
     // Update is called once per frame
