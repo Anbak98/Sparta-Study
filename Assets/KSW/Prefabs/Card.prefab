@@ -348,7 +348,7 @@ MonoBehaviour:
   back: {fileID: 4649029600559733544}
   animator: {fileID: 933691587084612653}
   frontimage: {fileID: 5382313140820095956}
-  clip: {fileID: 0}
+  clip: {fileID: 8300000, guid: f344eb4b4b185c54898a0fef81b9021c, type: 3}
 --- !u!95 &933691587084612653
 Animator:
   serializedVersion: 5

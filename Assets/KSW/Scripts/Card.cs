@@ -33,7 +33,7 @@ public class Card : MonoBehaviour
     {
         //if (GameManager.Instance.secondCard != null) return;
 
-        //audioSource.PlayOneShot(clip);
+        audioSource.PlayOneShot(clip);
         animator.SetBool("isOpen", true);
 
         #region 카드 매칭 확인 로직
