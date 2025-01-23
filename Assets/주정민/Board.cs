@@ -6,7 +6,8 @@ using UnityEngine.UIElements;
 public class Board : MonoBehaviour
 {
     [SerializeField] GameObject bod;
-    [SerializeField] Camera camera;
+    GameObject[,] cards;
+    MixingCard mc;
 
     // Start is called before the first frame update
     void Start()
@@ -17,7 +18,9 @@ public class Board : MonoBehaviour
 
         if (width == 6)
         {
-            camera.transform.position = new Vector3(2.47f, 3.38f, -8.98f);
+            Camera.main.transform.position = new Vector3(2.47f, 3.38f, -8.98f);
+            Camera.main.orthographicSize = 5;
+            cards = new GameObject[width, height];
             for (int i = 0; i < width * height; ++i)
             {
 
@@ -27,11 +30,14 @@ public class Board : MonoBehaviour
                 float y = (i / height) * interval;
 
                 go.transform.position = new Vector2(x, y);
+                cards[i%width, i/height] = go;
             }
         }
         else if (width == 10)
         {
-            camera.transform.position = new Vector3(3.58f, 4.83f, -12.2f);
+            Camera.main.transform.position = new Vector3(3.58f, 4.83f, -12.2f);
+            Camera.main.orthographicSize = 7;
+            cards = new GameObject[width, height];
             for (int i = 0; i < width * height; ++i)
             {
 
@@ -41,13 +47,11 @@ public class Board : MonoBehaviour
                 float y = (i / height) * interval;
 
                 go.transform.position = new Vector2(x, y);
+                cards[i % width, i / height] = go;
             }
         }
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        mc = new(this.cards);
+        mc.AssignIdxRandomly();
     }
 }

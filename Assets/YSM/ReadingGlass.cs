@@ -17,7 +17,7 @@ public class ReadingGlass : MonoBehaviour
         {
             Vector3 mousePos = Input.mousePosition;
 
-            Vector3 worldPoint = Camera.main.ScreenToWorldPoint(new Vector3(mousePos.x, mousePos.y, -Camera.main.nearClipPlane));
+            Vector3 worldPoint = Camera.main.ScreenToWorldPoint(new Vector3(mousePos.x, mousePos.y, Camera.main.nearClipPlane));
 
             RectTransformUtility.ScreenPointToLocalPointInRectangle(
                 canvas.GetComponent<RectTransform>(),

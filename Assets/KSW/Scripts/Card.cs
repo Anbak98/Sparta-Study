@@ -26,7 +26,7 @@ public class Card : MonoBehaviour
     public void Setting(int number)
     {
         idx = number;
-        frontimage.sprite = Resources.Load<Sprite>($"험카뒤{idx}");
+        frontimage.sprite = Resources.Load<Sprite>($"험카뒤{1}");
     }
 
     public void OpenCard()
@@ -38,10 +38,10 @@ public class Card : MonoBehaviour
 
         Invoke("CloseCardInvoke", 1.0f);
 
-        
+
 
         #region 카드 매칭 확인 로직
-        /*//firstCard가 비었다면,
+        //firstCard가 비었다면,
         if (GameManager.Instance.firstCard == null)
         {
             //firstCard에 내정보를 넘겨준다.
@@ -58,7 +58,7 @@ public class Card : MonoBehaviour
             GameManager.Instance.Matched();
         }
         // secondCard에 내 정보를 넘겨준다
-        // Matched 함수를 호출한다.*/
+        // Matched 함수를 호출한다.
         #endregion
     }
 
