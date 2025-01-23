@@ -21,9 +21,14 @@ public class MixingCard
     public void AssignIdxRandomly()
     {
         int[] numbers = Enumerable.Range(1, width*height).SelectMany(n => Enumerable.Repeat(n, 2)).ToArray();
-        
-        var random = new System.Random();
-        int[] shuffledNumbers = numbers.OrderBy(_ => random.Next()).ToArray();
+        numbers = numbers.OrderBy(_ => Random.Range(0.0f, 10.0f)).ToArray();
+
+        string log = "";
+        foreach (int number in numbers)
+        {
+            log += number + ", ";
+        }
+        Debug.Log(log);
 
         if(cards == null)
         {
@@ -34,7 +39,7 @@ public class MixingCard
         {
             for (int j = 0; j < height; ++j)
             {
-                cards[i, j].GetComponent<Card>().Setting(shuffledNumbers[i*width+height]);
+                cards[i, j].GetComponent<Card>().Setting(numbers[i+j*height]);
             }
         }
     }

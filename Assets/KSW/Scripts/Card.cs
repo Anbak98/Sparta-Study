@@ -42,16 +42,15 @@ public class Card : MonoBehaviour
         {
             //firstCard에 내정보를 넘겨준다.
             GameManager.Instance.firstCard = this;
+            Debug.Log(idx);
         }
-
-        //firstCard가 비어있지 않다면
-
         else
         {
             // secondCard에 내 정보를 넘겨준다
             GameManager.Instance.secondCard = this;
             // Matched 함수를 호출한다.
             GameManager.Instance.Matched();
+            Debug.Log(idx);
         }
         // secondCard에 내 정보를 넘겨준다
         // Matched 함수를 호출한다.
