@@ -17,7 +17,7 @@ public class MainMenuManager : MonoBehaviour
             PlayerPrefs.SetInt("Height", 6);
             PlayerPrefs.SetFloat("Timer", 60.0f);            
             PlayerPrefs.SetFloat("Interval", 1.0f);
-            SceneManager.LoadScene("SampleScene");
+            SceneManager.LoadScene("BoardScene");
         });
 
         hardButton.onClick.AddListener(() =>
@@ -26,7 +26,7 @@ public class MainMenuManager : MonoBehaviour
             PlayerPrefs.SetInt("Height", 10);
             PlayerPrefs.SetFloat("Timer", 120.0f);
             PlayerPrefs.SetFloat("Interval", 0.8f);
-            SceneManager.LoadScene("SampleScene");
+            SceneManager.LoadScene("BoardScene");
         });
     }
 }
