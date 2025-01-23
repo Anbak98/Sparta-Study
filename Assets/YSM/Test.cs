@@ -23,6 +23,21 @@ public class Test : MonoBehaviour
         int width = PlayerPrefs.GetInt("Width");
         int height = PlayerPrefs.GetInt("Height");
 
+        if(width == 6 || height == 6)
+        {
+            for(int i = 0; i < width * height; ++i)
+            {
+
+            }
+        }
+        else if(width == 10 || height == 10)
+        {
+            for (int i = 0; i < width * height; ++i)
+            {
+
+            }
+        }
+
         for (int i = 0; i < width; ++i)
         {
             for (int j = 0; j < height; ++j)
