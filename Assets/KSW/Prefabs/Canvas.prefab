@@ -430,6 +430,7 @@ GameObject:
   - component: {fileID: 8423519603973636373}
   - component: {fileID: 394588881438696889}
   - component: {fileID: 8650031455269001274}
+  - component: {fileID: 459820352385616023}
   m_Layer: 5
   m_Name: RetryButton
   m_TagString: Untagged
@@ -539,6 +540,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &459820352385616023
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1499185273825781031}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 075436e03207c3540881cc2df85e391b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1696699813230994995
 GameObject:
   m_ObjectHideFlags: 0
@@ -634,7 +647,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2896517222261368105
 RectTransform:
   m_ObjectHideFlags: 0
@@ -649,8 +662,8 @@ RectTransform:
   m_Children:
   - {fileID: 550635002896951645}
   - {fileID: 1991623399413768481}
-  - {fileID: 831688316935882088}
   - {fileID: 1424804868306322426}
+  - {fileID: 831688316935882088}
   m_Father: {fileID: 7741392837663548299}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -952,6 +965,7 @@ GameObject:
   - component: {fileID: 8735366580656313894}
   - component: {fileID: 6938101665495209870}
   - component: {fileID: 2954019150188186715}
+  - component: {fileID: 3804130166615367656}
   m_Layer: 5
   m_Name: MenuButton
   m_TagString: Untagged
@@ -1060,7 +1074,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 6938101665495209870}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3804130166615367656}
+        m_TargetAssemblyTypeName: RetryBtn, Assembly-CSharp
+        m_MethodName: MenuReturn
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &3804130166615367656
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3218640991335048021}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 075436e03207c3540881cc2df85e391b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3323628331031888882
 GameObject:
   m_ObjectHideFlags: 0
@@ -1152,6 +1190,7 @@ GameObject:
   - component: {fileID: 4676525826831682083}
   - component: {fileID: 1038566157186517962}
   - component: {fileID: 2924953869288730159}
+  - component: {fileID: 2172961234644209542}
   m_Layer: 5
   m_Name: MenuButton
   m_TagString: Untagged
@@ -1260,7 +1299,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1038566157186517962}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2172961234644209542}
+        m_TargetAssemblyTypeName: RetryBtn, Assembly-CSharp
+        m_MethodName: MenuReturn
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &2172961234644209542
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3470811398762482395}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 075436e03207c3540881cc2df85e391b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3638702944653261802
 GameObject:
   m_ObjectHideFlags: 0
@@ -1589,7 +1652,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &4636774277293158267
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1834,6 +1897,7 @@ GameObject:
   - component: {fileID: 3313027261807042741}
   - component: {fileID: 8245566604209619100}
   - component: {fileID: 4854559349519476948}
+  - component: {fileID: 5709906395050695145}
   m_Layer: 5
   m_Name: RetryButton
   m_TagString: Untagged
@@ -1942,7 +2006,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 8245566604209619100}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5709906395050695145}
+        m_TargetAssemblyTypeName: RetryBtn, Assembly-CSharp
+        m_MethodName: StartGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &5709906395050695145
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8625181780911687687}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 075436e03207c3540881cc2df85e391b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8674025671506733928
 GameObject:
   m_ObjectHideFlags: 0

@@ -470,11 +470,7 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
-    - target: {fileID: 296703714600623160, guid: 551d0412a1f4dd549be168369e38d485, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5243754440970992580, guid: 551d0412a1f4dd549be168369e38d485, type: 3}
+    - target: {fileID: 2369179186384529971, guid: 551d0412a1f4dd549be168369e38d485, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
@@ -558,11 +554,50 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8650031455269001274, guid: 551d0412a1f4dd549be168369e38d485, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8650031455269001274, guid: 551d0412a1f4dd549be168369e38d485, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8650031455269001274, guid: 551d0412a1f4dd549be168369e38d485, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2009018061}
+    - target: {fileID: 8650031455269001274, guid: 551d0412a1f4dd549be168369e38d485, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8650031455269001274, guid: 551d0412a1f4dd549be168369e38d485, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: StartGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 8650031455269001274, guid: 551d0412a1f4dd549be168369e38d485, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: RetryBtn, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8650031455269001274, guid: 551d0412a1f4dd549be168369e38d485, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 551d0412a1f4dd549be168369e38d485, type: 3}
+--- !u!114 &2009018061 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 459820352385616023, guid: 551d0412a1f4dd549be168369e38d485, type: 3}
+  m_PrefabInstance: {fileID: 2009018060}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 075436e03207c3540881cc2df85e391b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2069568607
 GameObject:
   m_ObjectHideFlags: 0
