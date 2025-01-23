@@ -13,18 +13,15 @@ public class MainMenuManager : MonoBehaviour
     {
         normalButton.onClick.AddListener(() =>
         {
-            StageData sd = Resources.Load<StageData>("StageData");
-            sd.width = 6;
-            sd.height = 6;
+            PlayerPrefs.SetInt("Width", 6);
+            PlayerPrefs.SetInt("Height", 6);
             SceneManager.LoadScene("SampleScene");
         });
 
         hardButton.onClick.AddListener(() =>
         {
-            StageData sd = Resources.Load<StageData>("StageData");
-            sd.width = 10;
-            sd.height = 10;
-            
+            PlayerPrefs.SetInt("Width", 10);
+            PlayerPrefs.SetInt("Height", 10);
             SceneManager.LoadScene("SampleScene");
         });
     }
