@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-[Serializable]
 [CreateAssetMenu(fileName = "StageData")]
 public class StageData : ScriptableObject
 {

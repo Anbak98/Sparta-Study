@@ -8,14 +8,16 @@ public class Test : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        StageData sd = Resources.Load<StageData>("StageData");
-        for(int i = 0; i < 6; ++i)
+        var sd = Resources.Load<StageData>("StageData");
+
+        for(int i = 0; i < sd.width; ++i)
         {
-            for(int j = 0; j < 6; ++j)
+            for(int j = 0; j < sd.height; ++j)
             {
                 Instantiate(obj, new Vector3(i, j), Quaternion.identity);
             }
         }
+
         Debug.Log($"TEST {sd.width}, {sd.height}");
     }
 
