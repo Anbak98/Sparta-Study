@@ -11,7 +11,7 @@ public class Board : MonoBehaviour
     {
         int width = PlayerPrefs.GetInt("Width");
         int height = PlayerPrefs.GetInt("Height");
-        float interval = PlayerPrefs.GetFloat("Intertval");
+        float interval = PlayerPrefs.GetFloat("Interval");
 
             for (int i = 0; i < width * height; ++i)
             {
