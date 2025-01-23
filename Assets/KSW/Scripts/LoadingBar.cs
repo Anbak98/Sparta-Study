@@ -26,6 +26,6 @@ public class LoadingBar : MonoBehaviour
     public void StartGame()
     {
         //씬 불러오기
-        SceneManager.LoadScene(/*불러올 씬 파일 이름*/"SampleScene");
+        SceneManager.LoadScene(/*불러올 씬 파일 이름*/"BoardScene");
     }
 }

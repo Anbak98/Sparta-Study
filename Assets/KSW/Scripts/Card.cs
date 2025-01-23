@@ -26,7 +26,7 @@ public class Card : MonoBehaviour
     public void Setting(int number)
     {
         idx = number;
-        frontimage.sprite = Resources.Load<Sprite>($"험카뒤{1}");
+        frontimage.sprite = Resources.Load<Sprite>($"험카뒤{idx}");
     }
 
     public void OpenCard()
@@ -35,10 +35,6 @@ public class Card : MonoBehaviour
 
         //audioSource.PlayOneShot(clip);
         animator.SetBool("isOpen", true);
-
-        Invoke("CloseCardInvoke", 1.0f);
-
-
 
         #region 카드 매칭 확인 로직
         //firstCard가 비었다면,

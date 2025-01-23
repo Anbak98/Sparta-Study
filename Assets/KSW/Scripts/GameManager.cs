@@ -7,17 +7,17 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
 
-    public Card firstCard;
-    public Card secondCard;
-
+    public Card firstCard { get; set; }
+    public Card secondCard { get; set; }
     public Text timeTxt;
+
     public GameObject SuccessEndPanel;
     public GameObject FailEndPanel;
 
     AudioSource audioSource;
     public AudioClip clip;
 
-    public int cardCount = 0;
+    int cardCount = 0;
     float time = 0.0f;
 
     private void Awake()
@@ -27,15 +27,18 @@ public class GameManager : MonoBehaviour
             Instance = this;
         }
         FailEndPanel.SetActive(false);
-        SuccessEndPanel.SetActive(true);
+        SuccessEndPanel.SetActive(false);
         Application.targetFrameRate = 60;
+        int w = PlayerPrefs.GetInt("Width");
+        int h = PlayerPrefs.GetInt("Height");
+        cardCount = w * h;
     }
 
     // Start is called before the first frame update
     void Start()
     {
         Time.timeScale = 1.0f;
-        time = PlayerPrefs.GetFloat("Time");
+        time = PlayerPrefs.GetFloat("Timer");
         audioSource = GetComponent<AudioSource>();
     }
 
