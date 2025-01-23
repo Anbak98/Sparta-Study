@@ -198,7 +198,7 @@ MonoBehaviour:
   prefab: {fileID: 5506773280612072714}
   cam: {fileID: 2373057193142170891}
   rawImage: {fileID: 5169227113972018317}
-  canvas: {fileID: 0}
+  canvas: {fileID: 3437761710938595291}
 --- !u!1 &5506773280612072714
 GameObject:
   m_ObjectHideFlags: 0
