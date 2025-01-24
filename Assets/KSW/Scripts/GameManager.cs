@@ -36,6 +36,7 @@ public class GameManager : MonoBehaviour
         int h = PlayerPrefs.GetInt("Height");
         cardCount = w * h;
         isLoseSound = false;
+        isVictorySound = false;
     }
 
     // Start is called before the first frame update
@@ -77,7 +78,11 @@ public class GameManager : MonoBehaviour
             if (cardCount == 0)
             {
                 Time.timeScale = 0.0f;
-                audioSource.PlayOneShot(clip[3]);
+                if (!isVictorySound)
+                {
+                    isVictorySound=true;
+                    audioSource.PlayOneShot(clip[3]);
+                }
                 SuccessEndPanel.SetActive(true);
                 timeTxt.text = time.ToString("N2");
             }
