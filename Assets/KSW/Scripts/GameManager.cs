@@ -15,7 +15,10 @@ public class GameManager : MonoBehaviour
     public GameObject FailEndPanel;
 
     AudioSource audioSource;
-    public AudioClip clip;
+    public AudioClip[] clip;
+    bool isLoseSound = false;
+    bool isVictorySound = false;
+
 
     int cardCount = 0;
     float time = 0.0f;
@@ -32,6 +35,7 @@ public class GameManager : MonoBehaviour
         int w = PlayerPrefs.GetInt("Width");
         int h = PlayerPrefs.GetInt("Height");
         cardCount = w * h;
+        isLoseSound = false;
     }
 
     // Start is called before the first frame update
@@ -48,8 +52,13 @@ public class GameManager : MonoBehaviour
         time -= Time.deltaTime;
         if (cardCount!= 0 && time <= 0.0f)
         {
+            timeTxt.text = "0.00";
             Time.timeScale = 0.0f;
-            timeTxt.text = "0.0";
+            if (!isLoseSound)
+            {
+                isLoseSound=true;
+                audioSource.PlayOneShot(clip[1]);
+            }
             FailEndPanel.SetActive(true);
         }
 
@@ -61,13 +70,14 @@ public class GameManager : MonoBehaviour
         {
 
             //ÆÄ±«ÇØ¶ó
-            audioSource.PlayOneShot(clip);
+            audioSource.PlayOneShot(clip[0]);
             firstCard.DestroyCard();
             secondCard.DestroyCard();
             cardCount -= 2;
             if (cardCount == 0)
             {
                 Time.timeScale = 0.0f;
+                audioSource.PlayOneShot(clip[3]);
                 SuccessEndPanel.SetActive(true);
                 timeTxt.text = time.ToString("N2");
             }
@@ -76,6 +86,7 @@ public class GameManager : MonoBehaviour
         {
             firstCard.CloseCard();
             secondCard.CloseCard();
+            audioSource.PlayOneShot(clip[2]);
         }
         firstCard = null;
         secondCard = null;
