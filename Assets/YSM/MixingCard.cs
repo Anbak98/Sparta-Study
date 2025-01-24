@@ -1,4 +1,5 @@
 //System
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,14 +21,21 @@ public class MixingCard
 
     public void AssignIdxRandomly()
     {
-        int[] numbers = Enumerable.Range(1, width*height).SelectMany(n => Enumerable.Repeat(n, 2)).ToArray();
-        numbers = numbers.OrderBy(_ => Random.Range(0.0f, 10.0f)).ToArray();
+        System.Random random = new System.Random();
 
-        string log = "";
+        int[] numbers = Enumerable.Range(0, 50)
+            .OrderBy(_ => random.Next())
+            .Take(width * height / 2)
+            .SelectMany(n => Enumerable.Repeat(n, 2))
+            .OrderBy(_ => random.Next())
+            .ToArray();
+
+        string log = $"{numbers.Length} - ";
         foreach (int number in numbers)
         {
             log += number + ", ";
         }
+
         Debug.Log(log);
 
         if(cards == null)
