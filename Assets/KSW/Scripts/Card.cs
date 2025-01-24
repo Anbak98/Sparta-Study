@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Card : MonoBehaviour
@@ -16,6 +17,8 @@ public class Card : MonoBehaviour
     AudioSource audioSource;
     public AudioClip clip;
 
+    bool isChoose = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -31,25 +34,28 @@ public class Card : MonoBehaviour
     public void OpenCard()
     {
         //if (GameManager.Instance.secondCard != null) return;
-
-        audioSource.PlayOneShot(clip);
-        animator.SetBool("isOpen", true);
-
-        #region 카드 매칭 확인 로직
-        //firstCard가 비었다면,
-        if (GameManager.Instance.firstCard == null)
+        if (!isChoose)
         {
-            //firstCard에 내정보를 넘겨준다.
-            GameManager.Instance.firstCard = this;
-            Debug.Log(idx);
-        }
-        else
-        {
-            // secondCard에 내 정보를 넘겨준다
-            GameManager.Instance.secondCard = this;
-            // Matched 함수를 호출한다.
-            GameManager.Instance.Matched();
-            Debug.Log(idx);
+            isChoose = true;
+            audioSource.PlayOneShot(clip);
+            animator.SetBool("isOpen", true);
+
+            #region 카드 매칭 확인 로직
+            //firstCard가 비었다면,
+            if (GameManager.Instance.firstCard == null)
+            {
+                //firstCard에 내정보를 넘겨준다.
+                GameManager.Instance.firstCard = this;
+                Debug.Log(idx);
+            }
+            else
+            {
+                // secondCard에 내 정보를 넘겨준다
+                GameManager.Instance.secondCard = this;
+                // Matched 함수를 호출한다.
+                GameManager.Instance.Matched();
+                Debug.Log(idx);
+            }
         }
         // secondCard에 내 정보를 넘겨준다
         // Matched 함수를 호출한다.
@@ -72,5 +78,6 @@ public class Card : MonoBehaviour
     public void CloseCardInvoke()
     {
         animator.SetBool("isOpen", false);
+        isChoose = false;
     }
 }
